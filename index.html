@@ -1,0 +1,22 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>IAP Login Code</title>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            document.getElementById('code').innerHTML = urlParams.get('code');
+          });
+        </script>
+    </head>
+    <body>
+        <p>
+            This page serves as a callback for IAP programmatic authentication when the client cannot listen itself for the callback.
+        </p>
+        <p>
+            Your code is: <span id="code"></span>
+        </p>
+    </body>
+</html>
+
